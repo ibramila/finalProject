@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./style.scss"
 function Navbar() {
   const activeStyle = {
+    color:"red",
     textDecoration: "underline",
   };
   return (
