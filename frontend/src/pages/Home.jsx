@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import BestServices from "../components/BestServices/BestServices";
 import HeroSection from "../components/HeroSection/HeroSection";
 import ServicesInformation from "../components/SericesInformation/ServicesInformation";
+import Members from "../components/Members/ProfessionalMembers";
 function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ function Home() {
       <HeroSection />
       <BestServices />
       <ServicesInformation />
+      <Members />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 function ProfessionalMembers() {
   return (
-    <section>
+    <section className="professionals">
       <div className="container">
         <div className="section_wrapper">
           <div
@@ -30,24 +30,83 @@ function ProfessionalMembers() {
                 src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team2.png"
                 alt="member"
               />
-              <span>Ethan Welch</span>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  gap: "20px",
-                }}
-              >
-                <hr
+              <div className="member">
+                <span>Ethan Welch</span>
+                <div
                   style={{
-                    width: "10%",
-                    height: "2px",
-                    border: "none",
-                    background: "red",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "20px",
+                    width: "100%",
                   }}
-                />
-                <h3>OUR TOP SERVICES</h3>
+                >
+                  <hr
+                    style={{
+                      width: "15%",
+                      height: "2px",
+                      border: "none",
+                      background: "red",
+                    }}
+                  />
+                  <h6>UX Designer</h6>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team3.png"
+                alt="member"
+              />
+              <div className="member">
+                <span>Ethan Welch</span>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "20px",
+                    width: "100%",
+                  }}
+                >
+                  <hr
+                    style={{
+                      width: "15%",
+                      height: "2px",
+                      border: "none",
+                      background: "red",
+                    }}
+                  />
+                  <h6>UX Designer</h6>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team1.png"
+                alt="member"
+              />
+              <div className="member">
+                <span>Ethan Welch</span>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "20px",
+                    width: "100%",
+                  }}
+                >
+                  <hr
+                    style={{
+                      width: "15%",
+                      height: "2px",
+                      border: "none",
+                      background: "red",
+                    }}
+                  />
+                  <h6>UX Designer</h6>
+                </div>
               </div>
             </li>
           </ul>
