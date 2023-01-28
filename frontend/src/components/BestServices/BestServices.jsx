@@ -8,16 +8,32 @@ function BestServices() {
   const [posts, setPosts] = useState([]);
   const [filtered, setFiltered] = useState("");
 
-  useEffect(() => {
+  const getData = () => {
     URL.get("/services").then((response) => {
       setPosts(response.data);
     });
+  };
+
+  useEffect(() => {
+    getData();
   }, []);
 
   function handleFilter(e) {
     setFiltered(e.target.value);
   }
 
+  const deletePost = async (id) => {
+    await URL.delete(`/services/${id}`);
+    setPosts(
+      posts.filter((post) => {
+        return post.id !== id;
+      })
+    );
+
+    getData();
+  };
+
+  console.log(posts);
   return (
     <section className="services">
       <div className="container">
@@ -58,9 +74,10 @@ function BestServices() {
               .map((post) => {
                 return (
                   <li key={post._id}>
+                    <img style={{ width: "40px" }} src={post.image} alt="img" />
                     <h2>{post.name}</h2>
                     <p>{post.information}</p>
-                    <button>delete</button>
+                    <button onClick={() => deletePost(post._id)}>delete</button>
                   </li>
                 );
               })}

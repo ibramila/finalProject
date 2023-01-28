@@ -9,6 +9,7 @@ function AddSection() {
   const [state, setState] = useState({
     name: "",
     information: "",
+    image:""
   });
 
   const {
@@ -30,6 +31,7 @@ function AddSection() {
     setState({
       name: "",
       information: "",
+      image:""
     });
   };
 
@@ -53,6 +55,20 @@ function AddSection() {
           />
           {errors.name ? (
             <span style={{ color: "red" }}>{errors.name.message}</span>
+          ) : (
+            <></>
+          )}
+          <input
+            {...register("image")}
+            value={state.image}
+            type="text"
+            onChange={handleChange}
+            name="image"
+            placeholder="Image"
+            id="image"
+          />
+          {errors.image ? (
+            <span style={{ color: "red" }}>{errors.image.message}</span>
           ) : (
             <></>
           )}

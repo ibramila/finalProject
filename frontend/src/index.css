@@ -38,7 +38,12 @@ button {
   color: white;
   text-transform: uppercase;
   padding: 20px 30px;
-  border: none;
+  border: 1px solid red;
+}
+button:hover {
+  color: red;
+  background-color: white;
+  border: 1px solid red;
 }
 h1 {
   font-weight: 900;

@@ -17,10 +17,10 @@ const servicesScheme = new Schema(
             type: String,
             required: true
         },
-        // icon: {
-        //     type: String,
-        //     required: true
-        // },
+        icons: {
+            type: String,
+            required: true
+        },
         information: {
             type: String,
             required: true
@@ -76,7 +76,7 @@ app.post("/services", async (req, res) => {
     const service = req.body
     try {
         await Services.create(service)
-        res.status(200).json({message:"jsdvsv"})
+        res.status(200).json({ message: "jsdvsv" })
     } catch (error) {
         console.log(error)
     }
@@ -85,12 +85,13 @@ app.post("/services", async (req, res) => {
 
 app.delete("/services/:id", (req, res) => {
     const { id } = req.params;
-    Services.findByIdAndDelete(id, (err, docs) => {
+    Services.findByIdAndDelete(id, (err) => {
         if (!err) {
-            res.send.json({ message: "deleted" })
+            res.json({ message: "deleted" })
         }
         else {
             res.status(500).json({ message: err })
         }
     })
 })
+
