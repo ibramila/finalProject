@@ -17,7 +17,7 @@ const servicesScheme = new Schema(
             type: String,
             required: true
         },
-        icons: {
+        image: {
             type: String,
             required: true
         },
